@@ -4,7 +4,8 @@
     "build": "next build",
     "dev": "next dev --turbopack",
     "start": "next start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "unrs-resolver": "unrs-resolver@1.11.1"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
