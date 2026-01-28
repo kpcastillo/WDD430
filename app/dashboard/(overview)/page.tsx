@@ -5,7 +5,7 @@ import { lusitana } from '@/app/ui/fonts';
 import { Suspense } from 'react';
 import CardWrapper from '@/app/ui/dashboard/cards';
 import { RevenueChartSkeleton, LatestInvoicesSkeleton, CardsSkeleton } from '@/app/ui/skeletons';
-import { fetchLatestInvoices } from '@/app/lib/data'; // Adjust the import path as needed
+import { fetchLatestInvoices } from '@/app/lib/data';
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -26,7 +26,7 @@ export default async function Page() {
         </Suspense>
       </div>
       <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-4 lg:grid-cols-8">
-         <Suspense fallback={<CardsSkeleton />}>
+        <Suspense fallback={<CardsSkeleton />}>
           <CardWrapper />
         </Suspense>
         <Suspense fallback={<RevenueChartSkeleton />}>
